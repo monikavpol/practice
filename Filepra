@@ -1,0 +1,14 @@
+	public static void main(String[] args) throws InterruptedException, IOException {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		//driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get("https://demo.guru99.com/test/upload/");
+		Thread.sleep(1000);
+
+		driver.findElement(By.id("file_wraper0")).click();
+		Runtime.getRuntime().exec("C:\\Users\\91956\\Desktop\\practice\\select.exe");
+
+	}
+
